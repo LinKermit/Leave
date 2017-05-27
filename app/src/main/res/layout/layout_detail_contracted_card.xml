@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="2dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ic_pay_bangumi_tips"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_pay_bangumi_tips" />
+
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/ic_pay_bangumi_tips"
+                android:paddingTop="5dp"
+                android:text="请承包我吧"
+                android:textColor="#FEA501"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pay"
+                android:layout_toRightOf="@+id/ic_pay_bangumi_tips"
+                android:text="已经有33人承包了这部"
+                android:textColor="#FEA501"
+                android:textSize="@dimen/default_tiny_text_size" />
+
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#FEA501"
+                android:gravity="center"
+                android:text="承包"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_small_text_size" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</merge>

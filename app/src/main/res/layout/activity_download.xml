@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <!--下载文件头，点击编辑删除文件-->
+    <RelativeLayout
+        android:background="@color/gray_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地下载"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"/>
+
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/check_all"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:button="@drawable/checkbox_selector"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lin.leave.view.CustomEmptyView
+            android:id="@+id/empty_view"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_delete"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:background="@color/gray_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_pin_bg"
+            android:text="删除"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lin.leave.view.NumberProgress
+            android:id="@+id/num_progress"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#B8B8B8"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="主储存：23G/可用13G"
+                android:id="@+id/cache_size_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/btn_start_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="全部开始"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1sp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btn_start_all"
+            android:background="#555555" />
+
+        <TextView
+            android:id="@+id/btn_download_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/line"
+            android:text="编辑"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/download_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_action_download_refresh" />
+
+    </RelativeLayout>
+
+</LinearLayout>

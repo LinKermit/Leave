@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lin.leave.activity.VideoActivity">
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/jc_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_video_title"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="可怜的李光洙，不愧是臭手，连pd都忍不住笑了"/>
+
+        <TextView
+            android:id="@+id/tv_video_num"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="36772次播放"/>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_video_support"/>
+
+            <TextView
+                android:id="@+id/tv_support"
+                android:layout_marginLeft="10dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="278"/>
+
+            <ImageView
+                android:id="@+id/iv_commend"
+                android:layout_toRightOf="@+id/tv_support"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_video_commend"/>
+
+            <TextView
+                android:id="@+id/tv_commend"
+                android:layout_marginLeft="10dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_commend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="278"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycle_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    android:background="@color/normalBackground"
+    tools:context="com.lin.leave.activity.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bilibili.magicasakura.widgets.TintAppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color_primary">
+
+            <com.bilibili.magicasakura.widgets.TintToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.App.Toolbar"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/theme_color_primary"
+                app:layout_scrollFlags="scroll|snap">
+                <!--|enterAlways向上重新显示-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/iv_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu" />
+                    <com.lin.leave.view.CircleImageView
+                        android:id="@+id/iv_toolbar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_hotbitmapgg_avatar"
+                        app:border_color="@color/white"
+                        app:border_width="1dp" />
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="hotbitmapgg"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </com.bilibili.magicasakura.widgets.TintToolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/white_trans"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!--app:tabBackground="@color/theme_color_primary"-->
+        </com.bilibili.magicasakura.widgets.TintAppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_main_drawer"
+        app:headerLayout="@layout/nav_header"/>
+    <!--左侧菜单可使用listview从网络加载数据-->
+</android.support.v4.widget.DrawerLayout>

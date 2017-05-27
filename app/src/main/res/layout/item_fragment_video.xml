@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+            android:id="@+id/jc_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.lin.leave.view.CircleImageView
+                android:id="@+id/iv_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_hotbitmapgg_avatar"
+                app:border_color="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                app:border_width="1dp"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_image"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="命运石之门"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:text="20万播放"
+                android:layout_toLeftOf="@+id/tv_com"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_com"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="5dp"
+                android:textSize="14sp"
+                android:text="评论"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_video_commend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

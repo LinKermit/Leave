@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hint_search"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="搜索视频 番号 up主"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center|end"
+                    android:layout_weight="1"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_scan"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="大家都在搜"
+            android:textColor="@color/black_alpha_45"
+            android:textSize="14sp" />
+        
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tags_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <!--隐藏的tabFlowLayout-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/hide_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="gone">
+
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/hide_tags_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                app:max_select="-1" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/more_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clickable="true">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gray_dark"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="3dp"/>
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看更多"
+                android:drawableLeft="@drawable/ic_arrow_down_gray_round"
+                android:drawablePadding="3dp"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gray_dark"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ic_quanzi_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:layout_marginTop="@dimen/default_grow_margin"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_quanzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_quanzi" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_quanzi"
+                android:text="@string/interest_in_circle"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/window_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/topic_center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_header_topic_center" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_topic"
+                android:text="@string/topic_center"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/window_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/activity_center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_header_activity_center" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_activity"
+                android:text="话题中心"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_original"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:layout_marginTop="@dimen/default_grow_margin"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_original"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_btn_rank_original" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_original"
+                android:text="@string/original_rank"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/default_general_margin"
+                android:src="@drawable/ic_gray_arrow_right" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/window_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_all_rank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_all_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_btn_rank_all" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_all_rank"
+                android:text="@string/all_rank"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/default_general_margin"
+                android:src="@drawable/ic_gray_arrow_right" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_game_center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:layout_marginTop="@dimen/default_grow_margin"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_btn_game" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_game"
+                android:text="@string/game_center"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/window_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_item_layout_height"
+            android:background="@color/card_view_background"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ic_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:src="@drawable/ic_btn_shop" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_toRightOf="@+id/ic_shop"
+                android:text="@string/shop"
+                android:textColor="@color/font_normal"
+                android:textSize="@dimen/default_small_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/default_general_margin"
+                android:src="@drawable/ic_gray_arrow_right" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/item_game_head"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_hot"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="常用分类"/>
+
+    <GridView
+        android:layout_margin="10dp"
+        android:id="@+id/gd_type"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:numColumns="3"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"/>
+</LinearLayout>
